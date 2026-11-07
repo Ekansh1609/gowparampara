@@ -77,9 +77,9 @@ export function WasteToWealth() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {t("From Waste to Wealth", "कचरे से संपत्ति")}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="mx-auto max-w-none text-base text-muted-foreground lg:whitespace-nowrap xl:text-lg">
             {t(
-              "Transforming temple waste and cow dung into beautiful, sustainable products while empowering rural women",
+              "Transforming temple waste and cow dung into beautiful, sustainable products while empowering rural women.",
               "ग्रामीण महिलाओं को सशक्त बनाते हुए मंदिर के कचरे और गोबर को सुंदर, टिकाऊ उत्पादों में बदलना"
             )}
           </p>
