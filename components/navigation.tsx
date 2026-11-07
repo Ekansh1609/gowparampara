@@ -36,7 +36,7 @@ export function Navigation() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 w-full  border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b border-brand-border bg-brand-canvas">
       {/* Disabled translucent styling: bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 */}
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
@@ -54,7 +54,7 @@ export function Navigation() {
                 priority
                 className="h-12 w-auto object-contain"
               />
-              <span className="whitespace-nowrap font-serif text-sm font-bold text-primary sm:text-base md:text-xl">
+              <span className="whitespace-nowrap font-serif text-sm font-bold text-brand-text-primary sm:text-base md:text-xl">
                 Gowparampara
               </span>
               {/*<span className="text-[10px] text-muted-foreground -mt-1">
@@ -63,7 +63,7 @@ export function Navigation() {
             </div>
           </Link>
 
-          <nav className="hidden items-center justify-center gap-1 lg:col-start-2 lg:flex">
+          <nav className="hidden items-center justify-center gap-1 text-brand-text-primary lg:col-start-2 lg:flex">
             {navLinks.slice(0, 1).map((link) => (
               <Link
                 key={link.href}
@@ -88,7 +88,7 @@ export function Navigation() {
                     pathname?.startsWith("/shop") ? "secondary" : "ghost"
                   }
                   size="sm"
-                  className="gap-1 text-sm"
+                  className="gap-1 text-sm text-brand-text-primary hover:text-brand-terracotta"
                   data-testid="button-shop-dropdown"
                 >
                   {t("Shop", "दुकान")}
@@ -97,7 +97,7 @@ export function Navigation() {
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
-                className="w-56 bg-white text-gray-900"
+                className="w-56 bg-brand-card text-brand-text-primary"
               >
                 <Link href="/shop">
                   <DropdownMenuItem>
@@ -122,7 +122,7 @@ export function Navigation() {
                 <Button
                   variant={isActive(link.href) ? "secondary" : "ghost"}
                   size="sm"
-                  className="text-sm"
+                  className="text-sm text-brand-text-primary hover:text-brand-terracotta"
                 >
                   {language === "en" ? link.labelEn : link.labelHi}
                 </Button>
@@ -136,6 +136,7 @@ export function Navigation() {
                 <Button
                   variant="ghost"
                   size="icon"
+                  className="bg-brand-canvas text-brand-text-primary hover:bg-brand-sage hover:text-brand-sage-text"
                   data-testid="button-mobile-menu"
                 >
                   <Menu className="h-5 w-5" />
@@ -143,7 +144,7 @@ export function Navigation() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-80 bg-white text-gray-900"
+                className="w-80 bg-brand-card text-brand-text-primary"
               >
                 <nav className="flex flex-col gap-2 mt-8">
                   {navLinks.map((link) => (

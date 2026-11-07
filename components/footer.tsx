@@ -150,7 +150,7 @@ export function Footer() {
               </li>
             </ul>
 
-            <div>
+            <div className="rounded-lg bg-muted p-4">
               <p className="text-sm font-medium mb-2">
                 {t(
                   "Subscribe for Eco-Living Tips",

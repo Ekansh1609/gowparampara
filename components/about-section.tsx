@@ -81,7 +81,7 @@ export function AboutSection() {
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white p-4 rounded-lg shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-brand-terracotta text-white p-4 rounded-lg shadow-lg">
               <p className="font-serif text-2xl font-bold">Est. 2018</p>
               <p className="text-sm opacity-90">
                 {t("Serving with love", "प्यार से सेवा")}

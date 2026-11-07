@@ -37,10 +37,10 @@ export function HeroSection() {
             {badges.map((badge) => (
               <div
                 key={badge.labelEn}
-                className="flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5"
+                className="flex items-center gap-1.5 rounded-full border border-brand-sage bg-brand-sage px-3 py-1.5 text-brand-sage-text"
               >
-                <badge.icon className="h-3.5 w-3.5 text-green-400" />
-                <span className="text-xs text-white font-medium">
+                <badge.icon className="h-3.5 w-3.5 text-brand-forest" />
+                <span className="text-xs font-medium">
                   {t(badge.labelEn, badge.labelHi)}
                 </span>
               </div>
@@ -55,7 +55,7 @@ export function HeroSection() {
               )}
             </span>
             <br />
-            <span className="text-orange-500">
+            <span className="text-brand-terracotta">
               {t("Handmade by Rural India", "ग्रामीण भारत द्वारा हस्तनिर्मित")}
             </span>
           </h1>
@@ -72,7 +72,7 @@ export function HeroSection() {
               href="/shop"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "bg-orange-500 hover:bg-orange-600 text-white border-none gap-2"
+                "bg-brand-terracotta hover:bg-brand-terracotta-dark text-white border-none gap-2"
               )}
             >
               {t("Shop Handcrafted Products", "हस्तनिर्मित उत्पाद खरीदें")}
@@ -83,7 +83,7 @@ export function HeroSection() {
               href="/about"
               className={cn(
                 buttonVariants({ size: "lg", variant: "outline" }),
-                "border-white/30 text-white bg-white/10 backdrop-blur-md hover:bg-white/20"
+                "border-brand-forest bg-brand-forest text-white hover:bg-brand-forest/90"
               )}
             >
               {t("Our Story", "हमारी कहानी")}
