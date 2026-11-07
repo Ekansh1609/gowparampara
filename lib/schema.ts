@@ -17,11 +17,6 @@ export const categories = [
     nameEn: "Havan & Puja Essentials",
     nameHi: "हवन एवं पूजा सामग्री",
   },
-  {
-    id: "gardening-nature",
-    nameEn: "Gardening & Nature",
-    nameHi: "बागवानी एवं प्रकृति",
-  },
 ] as const;
 
 export type CategoryId = (typeof categories)[number]["id"];
@@ -39,7 +34,6 @@ export const productSchema = z.object({
     "aromatic-spiritual",
     "home-decor-idols",
     "havan-puja",
-    "gardening-nature",
   ]),
   image: z.string(),
   hoverImage: z.string().optional(),

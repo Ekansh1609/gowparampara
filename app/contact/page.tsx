@@ -91,12 +91,12 @@ export default function Contact() {
   ];
 
   return (
-    <main className="py-12">
+    <main className="py-10">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
             {t("Contact Us", "संपर्क करें")}
@@ -109,7 +109,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid gap-8 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -231,9 +231,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-4"
           >
-            <h2 className="font-serif text-2xl font-bold mb-6">
+            <h2 className="font-serif text-2xl font-bold">
               {t("Get in Touch", "संपर्क में रहें")}
             </h2>
 
@@ -257,6 +257,7 @@ export default function Contact() {
               ))}
             </div>
 
+            {/*
             <Card className="bg-primary/5 border-primary/20">
               <CardContent className="p-6">
                 <h3 className="font-serif font-semibold text-lg mb-2">
@@ -292,6 +293,7 @@ export default function Contact() {
                 title="Gau Parampara Location"
               />
             </div>
+            */}
           </motion.div>
         </div>
       </div>

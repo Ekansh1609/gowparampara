@@ -7,12 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n";
 
-// Define images locally to match Next.js public folder structure
-const aboutImages = {
-  women: "/images/women.jpg",
-  flowers: "/images/flowers.jpg",
-  cow: "/images/cow.jpg",
-};
+const aboutImage = "/images/story-page.png";
 
 export default function AboutPage() {
   const { t, language } = useLanguage();
@@ -104,7 +99,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="py-12">
+    <main className="py-10">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,9 +109,9 @@ export default function AboutPage() {
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
             {t("Our Story", "हमारी कहानी")}
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="mx-auto max-w-none text-base text-muted-foreground lg:whitespace-nowrap xl:text-lg">
             {t(
-              "A journey of tradition, sustainability, and empowerment rooted in the values of Swami Vivekananda",
+              "A journey of tradition, sustainability, and empowerment rooted in the values of Swami Vivekananda.",
               "स्वामी विवेकानंद के मूल्यों में निहित परंपरा, स्थिरता और सशक्तिकरण की यात्रा"
             )}
           </p>
@@ -130,7 +125,7 @@ export default function AboutPage() {
           >
             <div className="relative rounded-lg overflow-hidden aspect-[4/3]">
               <img
-                src={aboutImages.women}
+                src={aboutImage}
                 alt="Rural women artisans"
                 className="w-full h-full object-cover"
               />
@@ -181,7 +176,7 @@ export default function AboutPage() {
           </motion.div>
         </div>
 
-        <section className="mb-20">
+        <section className="mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +213,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="mb-20">
+        <section className="mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -229,9 +224,9 @@ export default function AboutPage() {
           </motion.h2>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block" />
+            <div className="absolute bottom-0 left-6 top-0 w-0.5 -translate-x-1/2 bg-border md:left-1/2" />
 
-            <div className="space-y-8">
+            <div className="space-y-8 md:space-y-4">
               {timeline.map((item, index) => (
                 <motion.div
                   key={item.year}
@@ -239,45 +234,28 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className={`flex flex-col md:flex-row gap-4 md:gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className="grid grid-cols-[3rem_minmax(0,1fr)] items-center gap-x-4 md:grid-cols-[minmax(0,1fr)_3rem_minmax(0,1fr)] md:gap-x-8"
                 >
-                  <div className="flex-1 md:text-right">
-                    {index % 2 === 0 && (
-                      <Card>
-                        <CardContent className="p-6">
-                          <h3 className="font-serif font-semibold text-lg mb-2">
-                            {language === "en" ? item.titleEn : item.titleHi}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {language === "en" ? item.descEn : item.descHi}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    )}
+                  <div className="relative z-10 col-start-1 row-start-1 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground md:col-start-2">
+                    {item.year}
                   </div>
 
-                  <div className="relative flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm z-10">
-                      {item.year}
-                    </div>
-                  </div>
-
-                  <div className="flex-1">
-                    {index % 2 !== 0 && (
-                      <Card>
-                        <CardContent className="p-6">
-                          <h3 className="font-serif font-semibold text-lg mb-2">
-                            {language === "en" ? item.titleEn : item.titleHi}
-                          </h3>
-                          <p className="text-sm text-muted-foreground">
-                            {language === "en" ? item.descEn : item.descHi}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    )}
-                  </div>
+                  <Card
+                    className={`col-start-2 row-start-1 ${
+                      index % 2 === 0
+                        ? "md:col-start-1 md:text-right"
+                        : "md:col-start-3"
+                    }`}
+                  >
+                    <CardContent className="p-6">
+                      <h3 className="mb-2 font-serif text-lg font-semibold">
+                        {language === "en" ? item.titleEn : item.titleHi}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {language === "en" ? item.descEn : item.descHi}
+                      </p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               ))}
             </div>

@@ -32,7 +32,7 @@ export function Testimonials() {
   );
 
   return (
-    <section className="py-16">
+    <section className="py-10">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -126,11 +126,14 @@ function TestimonialCard({
   const quote = language === "en" ? testimonial.quoteEn : testimonial.quoteHi;
 
   return (
-    <Card className="h-full" data-testid={`card-testimonial-${testimonial.id}`}>
+    <Card
+      className="h-full bg-muted"
+      data-testid={`card-testimonial-${testimonial.id}`}
+    >
       <CardContent className="p-6">
         <div className="flex gap-1 mb-4">
           {Array.from({ length: testimonial.rating }).map((_, i) => (
-            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+            <Star key={i} className="h-4 w-4 fill-brand-ochre text-brand-ochre" />
           ))}
         </div>
 

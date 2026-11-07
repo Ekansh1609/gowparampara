@@ -63,7 +63,7 @@ export function WasteToWealth() {
   const { t, language } = useLanguage();
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+    <section className="py-10 bg-gradient-to-b from-background to-muted/30">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export function WasteToWealth() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-green-500 hover:bg-green-600 text-white border-none">
+          <Badge className="mb-4 bg-brand-forest text-white border-none">
             {t("Our Process", "हमारी प्रक्रिया")}
           </Badge>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -102,7 +102,7 @@ export function WasteToWealth() {
                   <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center border-4 border-background">
                     <step.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-ochre text-white flex items-center justify-center font-bold text-sm">
                     {index + 1}
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export function WasteToWealth() {
               key={badge.labelEn}
               className="flex items-center gap-2 bg-card border rounded-full px-5 py-2.5"
             >
-              <badge.icon className="h-5 w-5 text-green-500" />
+              <badge.icon className="h-5 w-5 text-brand-forest" />
               <span className="font-medium">
                 {language === "en" ? badge.labelEn : badge.labelHi}
               </span>

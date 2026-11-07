@@ -8,91 +8,169 @@
   --radius: 0.5rem;
 }
 
+@theme inline {
+  --color-brand-terracotta: var(--brand-terracotta);
+  --color-brand-terracotta-dark: var(--brand-terracotta-dark);
+  --color-brand-ochre: var(--brand-ochre);
+  --color-brand-forest: var(--brand-forest);
+  --color-brand-sage: var(--brand-sage);
+  --color-brand-sage-text: var(--brand-sage-text);
+  --color-brand-canvas: var(--brand-canvas);
+  --color-brand-card: var(--brand-card);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-border: var(--brand-border);
+  --color-brand-text-primary: var(--brand-text-primary);
+  --color-brand-text-muted: var(--brand-text-muted);
+  --color-brand-cream: var(--brand-cream);
+  --color-header-nav-bg: var(--header-nav-bg);
+  --color-header-nav-border: var(--header-nav-border);
+  --color-header-logo-title: var(--header-logo-title);
+  --color-header-logo-sub: var(--header-logo-sub);
+  --color-header-link: var(--header-link);
+  --color-header-link-hover: var(--header-link-hover);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-border: var(--border);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-border: var(--primary-border);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-border: var(--secondary-border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-border: var(--destructive-border);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-saffron: var(--saffron);
+  --color-saffron-foreground: var(--saffron-foreground);
+  --color-leaf-green: var(--leaf-green);
+  --color-leaf-green-foreground: var(--leaf-green-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-button-outline: var(--button-outline);
+  --color-badge-outline: var(--badge-outline);
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 30 8% 12%;
+    --brand-terracotta: #c05621;
+    --brand-terracotta-dark: #a84414;
+    --brand-ochre: #d97706;
+    --brand-forest: #2f5233;
+    --brand-sage: #e7f0e7;
+    --brand-sage-text: #1b4332;
+    --brand-canvas: #fff8f5;
+    --brand-card: #ffffff;
+    --brand-sand: #fff1e8;
+    --brand-border: #ead8ce;
+    --brand-text-primary: #291d16;
+    --brand-text-muted: #5c4d42;
+    --brand-cream: #ffede1;
+    --header-nav-bg: #fff8f5;
+    --header-nav-border: #ead8ce;
+    --header-logo-title: #291d16;
+    --header-logo-sub: #c05621;
+    --header-link: #291d16;
+    --header-link-hover: #c05621;
 
-    --card: 30 4% 98%;
-    --card-foreground: 30 8% 12%;
-
-    --popover: 30 6% 94%;
-    --popover-foreground: 30 8% 12%;
-
-    --primary: 28 75% 35%;
-    --primary-foreground: 28 75% 98%;
-
-    --secondary: 30 10% 90%;
-    --secondary-foreground: 30 8% 15%;
-
-    --muted: 30 12% 93%;
-    --muted-foreground: 30 8% 35%;
-
-    --accent: 30 15% 92%;
-    --accent-foreground: 30 8% 15%;
-
-    --destructive: 0 72% 35%;
-    --destructive-foreground: 0 72% 98%;
-
-    --border: 30 6% 92%;
-    --input: 30 8% 75%;
-    --ring: 28 75% 35%;
-
-    --saffron: 28 90% 50%;
-    --saffron-foreground: 0 0% 100%;
-    --leaf-green: 120 45% 32%;
-    --leaf-green-foreground: 0 0% 100%;
-    --gold: 40 85% 45%;
-    --gold-foreground: 0 0% 10%;
+    --background: var(--brand-canvas);
+    --foreground: var(--brand-text-primary);
+    --card: var(--brand-card);
+    --card-foreground: var(--brand-text-primary);
+    --popover: var(--brand-card);
+    --popover-foreground: var(--brand-text-primary);
+    --primary: var(--brand-terracotta);
+    --primary-foreground: var(--brand-card);
+    --primary-border: var(--brand-terracotta-dark);
+    --secondary: var(--brand-forest);
+    --secondary-foreground: var(--brand-card);
+    --secondary-border: var(--brand-forest);
+    --muted: var(--brand-sand);
+    --muted-foreground: var(--brand-text-muted);
+    --accent: var(--brand-sage);
+    --accent-foreground: var(--brand-sage-text);
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+    --destructive-border: #b42318;
+    --border: var(--brand-border);
+    --button-outline: var(--brand-border);
+    --badge-outline: var(--brand-border);
+    --input: var(--brand-border);
+    --ring: var(--brand-terracotta);
+    --saffron: var(--brand-terracotta);
+    --saffron-foreground: var(--brand-card);
+    --leaf-green: var(--brand-forest);
+    --leaf-green-foreground: var(--brand-card);
+    --gold: var(--brand-ochre);
+    --gold-foreground: var(--brand-text-primary);
 
     --elevate-1: rgba(0, 0, 0, 0.03);
     --elevate-2: rgba(0, 0, 0, 0.08);
   }
 
   .dark {
-    --background: 30 4% 8%;
-    --foreground: 30 4% 96%;
-
-    --card: 30 4% 10%;
-    --card-foreground: 30 4% 96%;
-
-    --popover: 30 4% 14%;
-    --popover-foreground: 30 4% 96%;
-
-    --primary: 28 70% 32%;
-    --primary-foreground: 28 70% 98%;
-
-    --secondary: 30 8% 18%;
-    --secondary-foreground: 30 4% 92%;
-
-    --muted: 30 10% 16%;
-    --muted-foreground: 30 6% 65%;
-
-    --accent: 30 12% 16%;
-    --accent-foreground: 30 4% 92%;
-
-    --destructive: 0 68% 32%;
-    --destructive-foreground: 0 68% 98%;
-
-    --border: 30 4% 18%;
-    --input: 30 6% 28%;
-    --ring: 28 70% 40%;
-
-    --saffron: 28 85% 55%;
-    --leaf-green: 120 40% 40%;
-    --gold: 40 80% 55%;
+    --background: #15110e;
+    --foreground: var(--brand-cream);
+    --card: #211a16;
+    --card-foreground: var(--brand-cream);
+    --popover: #211a16;
+    --popover-foreground: var(--brand-cream);
+    --primary: var(--brand-terracotta);
+    --primary-foreground: #ffffff;
+    --primary-border: var(--brand-terracotta-dark);
+    --secondary: var(--brand-forest);
+    --secondary-foreground: #ffffff;
+    --secondary-border: var(--brand-forest);
+    --muted: #2a211b;
+    --muted-foreground: #d1bfb1;
+    --accent: #263a2a;
+    --accent-foreground: var(--brand-sage);
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+    --destructive-border: #b42318;
+    --border: #44362d;
+    --button-outline: #44362d;
+    --badge-outline: #44362d;
+    --input: #5c4d42;
+    --ring: var(--brand-terracotta);
+    --saffron: var(--brand-terracotta);
+    --saffron-foreground: #ffffff;
+    --leaf-green: #527b55;
+    --leaf-green-foreground: #ffffff;
+    --gold: var(--brand-ochre);
+    --gold-foreground: var(--brand-text-primary);
 
     --elevate-1: rgba(255, 255, 255, 0.04);
     --elevate-2: rgba(255, 255, 255, 0.09);
   }
 
   * {
-    border-color: hsl(var(--border));
+    border-color: var(--border);
   }
 
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    background-color: var(--background);
+    color: var(--muted-foreground);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--foreground);
   }
 }
 

@@ -55,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Card
-        className="overflow-visible group"
+        className="overflow-visible group bg-muted"
         data-testid={`card-product-${product.id}`}
       >
         <div className="relative aspect-square overflow-hidden rounded-t-lg">
@@ -76,7 +76,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 <Badge
                   key={tag}
                   variant="secondary"
-                  className="bg-green-600/90 text-white text-[10px] gap-1"
+                  className="text-[10px] gap-1"
                 >
                   <Icon className="h-3 w-3" />
                   {language === "en" ? tagLabels[tag]?.en : tagLabels[tag]?.hi}
@@ -86,7 +86,7 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
 
           {product.originalPrice && product.originalPrice > product.price && (
-            <Badge className="absolute top-2 right-2 bg-orange-500 text-white">
+            <Badge className="absolute top-2 right-2 bg-brand-terracotta text-white">
               {Math.round((1 - product.price / product.originalPrice) * 100)}%
               OFF
             </Badge>
