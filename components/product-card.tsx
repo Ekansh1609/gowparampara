@@ -55,7 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Card
-        className="overflow-visible group"
+        className="overflow-visible group bg-muted"
         data-testid={`card-product-${product.id}`}
       >
         <div className="relative aspect-square overflow-hidden rounded-t-lg">

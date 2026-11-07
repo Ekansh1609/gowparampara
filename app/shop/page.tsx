@@ -3,10 +3,12 @@
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { Filter, X, Search } from "lucide-react";
+import { Filter, X } from "lucide-react";
+// import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+// import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+/*
 import {
   Select,
   SelectContent,
@@ -14,6 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+*/
 import {
   Sheet,
   SheetContent,
@@ -43,7 +46,9 @@ function Shop() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>(
-    categoryFromUrl || "all"
+    categoryFromUrl === "gardening-nature"
+      ? "havan-puja"
+      : categoryFromUrl || "all"
   );
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("featured");
@@ -116,7 +121,7 @@ function Shop() {
       : null;
 
   return (
-    <main className="py-8">
+    <main className="py-10">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -202,7 +207,8 @@ function Shop() {
           </aside>
 
           <div className="flex-1">
-            <div className="flex flex-wrap gap-4 mb-6 items-center">
+            <div className="mb-6 flex items-center">
+              {/*
               <div className="relative flex-1 min-w-50">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
@@ -231,6 +237,7 @@ function Shop() {
                   </SelectItem>
                 </SelectContent>
               </Select>
+              */}
 
               <Sheet>
                 <SheetTrigger asChild className="lg:hidden">

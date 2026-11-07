@@ -17,7 +17,7 @@ import { Progress } from "@/components/ui/progress";
 import { useLanguage } from "@/lib/i18n";
 
 const aboutImages = {
-  women: "/images/women.jpg",
+  women: "/images/women-page.png",
 };
 
 export default function Empowerment() {
@@ -123,7 +123,7 @@ export default function Empowerment() {
   ];
 
   return (
-    <main className="py-12">
+    <main className="py-10">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -133,9 +133,9 @@ export default function Empowerment() {
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
             {t("Women Empowerment", "महिला सशक्तिकरण")}
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="mx-auto max-w-none text-base text-muted-foreground lg:whitespace-nowrap xl:text-lg">
             {t(
-              "Gramin Mahila Swarojgar - Creating sustainable livelihoods for rural women through skill development and fair trade",
+              "Gramin Mahila Swarojgar - Creating sustainable livelihoods for rural women through skill development and fair trade.",
               "ग्रामीण महिला स्वरोजगार - कौशल विकास और निष्पक्ष व्यापार के माध्यम से ग्रामीण महिलाओं के लिए स्थायी आजीविका का निर्माण"
             )}
           </p>
@@ -201,7 +201,7 @@ export default function Empowerment() {
           </motion.div>
         </div>
 
-        <section className="mb-20">
+        <section className="mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -242,7 +242,7 @@ export default function Empowerment() {
           </div>
         </section>
 
-        <section className="mb-20">
+        <section className="mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
