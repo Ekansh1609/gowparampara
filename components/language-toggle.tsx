@@ -26,7 +26,7 @@ export function LanguageToggle() {
           </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="bg-white text-gray-900">
         <DropdownMenuItem
           onClick={() => setLanguage("en")}
           data-testid="menu-item-english"
