@@ -7,10 +7,6 @@ import {
   Phone,
   MapPin,
   Send,
-  Facebook,
-  Instagram,
-  Twitter,
-  Youtube,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -65,6 +61,7 @@ export function Footer() {
                 "टिकाऊ आजीविका के माध्यम से गौ संरक्षण और महिला सशक्तिकरण के लिए आज़ाद हिंद फौज ट्रस्ट की एक पहल।"
               )}
             </p>
+            {/*
             <div className="flex gap-2">
               <Button variant="ghost" size="icon">
                 <Facebook className="h-4 w-4" />
@@ -79,6 +76,7 @@ export function Footer() {
                 <Youtube className="h-4 w-4" />
               </Button>
             </div>
+            */}
           </div>
 
           <div>

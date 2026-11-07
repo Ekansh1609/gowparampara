@@ -101,7 +101,7 @@ export default function Contact() {
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
             {t("Contact Us", "संपर्क करें")}
           </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="mx-auto max-w-none text-base text-muted-foreground lg:whitespace-nowrap xl:text-lg">
             {t(
               "Have questions about our products or want to partner with us? We'd love to hear from you!",
               "हमारे उत्पादों के बारे में प्रश्न हैं या हमारे साथ साझेदारी करना चाहते हैं? हमें आपसे सुनना अच्छा लगेगा!"

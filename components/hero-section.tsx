@@ -21,7 +21,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative h-[calc(100svh-4rem)] flex items-center overflow-hidden">
+    <section className="relative h-[calc(100svh-4.5rem)] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={heroImage}

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, Facebook, Instagram } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -39,7 +39,7 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b border-brand-border bg-brand-canvas">
       {/* Disabled translucent styling: bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 */}
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+        <div className="grid h-[4.5rem] grid-cols-[1fr_auto] items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
           <Link
             href="/"
             className="flex items-center gap-2"
@@ -52,7 +52,7 @@ export function Navigation() {
                 width={72}
                 height={54}
                 priority
-                className="h-12 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
               <span className="whitespace-nowrap font-serif text-sm font-bold text-brand-text-primary sm:text-base md:text-xl">
                 Gowparampara
@@ -131,15 +131,33 @@ export function Navigation() {
           </nav>
 
           <div className="col-start-2 row-start-1 flex items-center justify-end gap-1 lg:col-start-3">
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              aria-label="Facebook"
+              className="h-12 w-12 text-brand-text-primary hover:bg-brand-sage hover:text-brand-forest [&_svg]:!size-5 lg:h-14 lg:w-14 lg:[&_svg]:!size-6"
+            >
+              <Facebook />
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              aria-label="Instagram"
+              className="h-12 w-12 text-brand-text-primary hover:bg-brand-sage hover:text-brand-forest [&_svg]:!size-5 lg:h-14 lg:w-14 lg:[&_svg]:!size-6"
+            >
+              <Instagram />
+            </Button>
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="bg-brand-canvas text-brand-text-primary hover:bg-brand-sage hover:text-brand-sage-text"
+                  className="h-12 w-12 bg-brand-canvas text-brand-text-primary hover:bg-brand-sage hover:text-brand-sage-text [&_svg]:!size-6"
                   data-testid="button-mobile-menu"
                 >
-                  <Menu className="h-5 w-5" />
+                  <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent
