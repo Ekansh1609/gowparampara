@@ -32,7 +32,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full px-4 md:px-6 lg:px-8 py-20 text-left">
-        <div className="w-full max-w-2xl text-left">
+        <div className="w-full max-w-2xl text-left md:max-w-none">
           <div className="flex flex-wrap gap-2 mb-6">
             {badges.map((badge) => (
               <div
@@ -47,8 +47,8 @@ export function HeroSection() {
             ))}
           </div>
 
-          <h1 className="text-left font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-            <span className="inline-block whitespace-nowrap">
+          <h1 className="text-left font-serif text-4xl md:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            <span className="md:whitespace-nowrap">
               {t(
                 "Tradition Meets Sustainability:",
                 "परंपरा मिलती है स्थिरता से:"
@@ -60,7 +60,7 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-left text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+          <p className="max-w-2xl text-left text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
             {t(
               "Empowering women and protecting cows through 100% natural, chemical-free products. From waste to wealth, creating sustainable livelihoods.",
               "100% प्राकृतिक, रसायन-मुक्त उत्पादों के माध्यम से महिलाओं को सशक्त बनाना और गायों की रक्षा करना। कचरे से संपत्ति, स्थायी आजीविका का निर्माण।"
